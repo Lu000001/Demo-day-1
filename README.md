@@ -1,0 +1,1 @@
+# sino-danish-college-course-model-project-template
