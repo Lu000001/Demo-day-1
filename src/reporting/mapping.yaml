@@ -1,0 +1,18 @@
+energy_conversion: 0.031536  # GWa -> EJ/yr; a 365-day year
+sectors:
+  building: Residential and Commercial
+  transport: Transportation
+  steel: Industry|Iron and Steel
+  other_industry: Industry
+carriers:
+  electricity: Electricity
+  coal: Solids|Coal
+  coke: Solids|Coal
+  gas: Gases
+  biomass: Solids|Biomass
+  gasoline: Liquids|Oil
+  diesel: Liquids|Oil
+  kerosene: Liquids|Oil
+  fuel_oil: Liquids|Oil
+  lpg: Liquids|Oil
+  heat: Heat

@@ -1,0 +1,13 @@
+node_loc,technology,mode,node_dest,commodity,level,unit,2030,2035
+China,coke_feedstock,standard,China,coke,feedstock,-,1,1
+China,supply_biomass,standard,China,biomass,final,-,1,1
+China,supply_coal,standard,China,coal,final,-,1,1
+China,supply_coke,standard,China,coke,final,-,1,1
+China,supply_diesel,standard,China,diesel,final,-,1,1
+China,supply_fuel_oil,standard,China,fuel_oil,final,-,1,1
+China,supply_gas,standard,China,gas,final,-,1,1
+China,supply_gasoline,standard,China,gasoline,final,-,1,1
+China,supply_iron_ore,standard,China,iron_ore,material,-,1,1
+China,supply_kerosene,standard,China,kerosene,final,-,1,1
+China,supply_lpg,standard,China,lpg,final,-,1,1
+China,supply_scrap,standard,China,scrap,material,-,1,1

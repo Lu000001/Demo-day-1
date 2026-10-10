@@ -1,0 +1,7 @@
+node_loc,technology,mode,emission,unit,2030,2035
+China,use_other_industry_coal,standard,CO2,Mt CO2/GWa,2.867083396,2.867083396
+China,use_other_industry_diesel,standard,CO2,Mt CO2/GWa,2.216071341,2.216071341
+China,use_other_industry_electricity,standard,CO2,Mt CO2/GWa,0.0,0.0
+China,use_other_industry_gas,standard,CO2,Mt CO2/GWa,1.581498984,1.581498984
+China,use_other_industry_gasoline,standard,CO2,Mt CO2/GWa,2.111953251,2.111953251
+China,use_other_industry_lpg,standard,CO2,Mt CO2/GWa,1.581498984,1.581498984

@@ -1,0 +1,18 @@
+name,kind,activity_unit,sector,carrier,source,description
+coal_existing,power_existing,GWa,power,electricity,Coal,"coal: inherited capacity, fixed annual availability"
+coal_new,power_new,GWa,power,electricity,Coal,coal: new investment
+gas_existing,power_existing,GWa,power,electricity,Gas,"gas: inherited capacity, fixed annual availability"
+gas_new,power_new,GWa,power,electricity,Gas,gas: new investment
+nuclear_existing,power_existing,GWa,power,electricity,Nuclear,"nuclear: inherited capacity, fixed annual availability"
+nuclear_new,power_new,GWa,power,electricity,Nuclear,nuclear: new investment
+hydro_existing,power_existing,GWa,power,electricity,Hydro,"hydro: inherited capacity, fixed annual availability"
+hydro_new,power_new,GWa,power,electricity,Hydro,hydro: new investment
+wind_existing,power_existing,GWa,power,electricity,Wind,"wind: inherited capacity, fixed annual availability"
+wind_new,power_new,GWa,power,electricity,Wind,wind: new investment
+solar_existing,power_existing,GWa,power,electricity,Solar,"solar: inherited capacity, fixed annual availability"
+solar_new,power_new,GWa,power,electricity,Solar,solar: new investment
+biomass_existing,power_existing,GWa,power,electricity,Biomass,"biomass: inherited capacity, fixed annual availability"
+biomass_new,power_new,GWa,power,electricity,Biomass,biomass: new investment
+grid,distribution,GWa,power,electricity,none,Annual grid delivery; 5% electricity loss
+heat_coal,heat,GWa,power,heat,Coal,Aggregate district-heat boiler
+heat_gas,heat,GWa,power,heat,Gas,Aggregate district-heat boiler

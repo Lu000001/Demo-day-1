@@ -1,0 +1,3 @@
+name,kind,activity_unit,sector,carrier,source,description
+iron_capture,capture,Mt/yr,steel,CO2_captured,none,CCS addon per tonne of blast-furnace output
+co2_storage,storage,Mt CO2/yr,steel,CO2_captured,none,Aggregate CO2 transport and permanent geological storage

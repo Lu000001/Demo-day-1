@@ -1,0 +1,15 @@
+technology,source,year,value,unit,capacity_factor
+coal_existing,Coal,2030,1177.813,GW,0.45
+coal_existing,Coal,2035,1146.923,GW,0.45
+gas_existing,Gas,2030,149.36,GW,0.25
+gas_existing,Gas,2035,139.028,GW,0.25
+nuclear_existing,Nuclear,2030,58.134,GW,0.95
+nuclear_existing,Nuclear,2035,58.134,GW,0.95
+hydro_existing,Hydro,2030,225.378005,GW,0.3846041472
+hydro_existing,Hydro,2035,225.378005,GW,0.3846041472
+wind_existing,Wind,2030,391.653,GW,0.2579637402
+wind_existing,Wind,2035,296.557,GW,0.2530737671
+solar_existing,Solar,2030,443.68,GW,0.153700192
+solar_existing,Solar,2035,407.725,GW,0.152173515
+biomass_existing,Biomass,2030,18.88,GW,0.4600635593
+biomass_existing,Biomass,2035,18.88,GW,0.4600635593

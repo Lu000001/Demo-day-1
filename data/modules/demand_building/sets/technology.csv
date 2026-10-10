@@ -1,0 +1,9 @@
+name,kind,activity_unit,sector,carrier,source,description
+use_building_biomass,final_use,GWa,building,biomass,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_coal,final_use,GWa,building,coal,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_diesel,final_use,GWa,building,diesel,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_electricity,final_use,GWa,building,electricity,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_gas,final_use,GWa,building,gas,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_gasoline,final_use,GWa,building,gasoline,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_heat,final_use,GWa,building,heat,none,Identity bridge: no end-use efficiency or service-demand model
+use_building_lpg,final_use,GWa,building,lpg,none,Identity bridge: no end-use efficiency or service-demand model

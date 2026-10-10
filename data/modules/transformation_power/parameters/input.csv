@@ -1,0 +1,10 @@
+node_loc,technology,mode,node_origin,commodity,level,unit,2030,2035
+China,biomass_existing,standard,China,biomass,final,-,4.0,4.0
+China,biomass_new,standard,China,biomass,final,-,4.0,4.0
+China,coal_existing,standard,China,coal,final,-,2.702702703,2.702702703
+China,coal_new,standard,China,coal,final,-,2.702702703,2.702702703
+China,gas_existing,standard,China,gas,final,-,2.5,2.5
+China,gas_new,standard,China,gas,final,-,2.5,2.5
+China,grid,standard,China,electricity,secondary,-,1.052631579,1.052631579
+China,heat_coal,standard,China,coal,final,-,1.7,1.7
+China,heat_gas,standard,China,gas,final,-,1.2,1.2

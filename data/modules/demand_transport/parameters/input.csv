@@ -1,0 +1,7 @@
+node_loc,technology,mode,node_origin,commodity,level,unit,2030,2035
+China,use_transport_diesel,standard,China,diesel,final,-,1,1
+China,use_transport_electricity,standard,China,electricity,final,-,1,1
+China,use_transport_fuel_oil,standard,China,fuel_oil,final,-,1,1
+China,use_transport_gas,standard,China,gas,final,-,1,1
+China,use_transport_gasoline,standard,China,gasoline,final,-,1,1
+China,use_transport_kerosene,standard,China,kerosene,final,-,1,1

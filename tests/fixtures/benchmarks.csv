@@ -1,0 +1,15 @@
+metric,year,value,unit,relative_tolerance
+final_energy_other_industry,2030,42.27653915,EJ/yr,1e-06
+final_energy_transport,2030,12.85292446,EJ/yr,1e-06
+final_energy_building,2030,34.42998412,EJ/yr,1e-06
+steel_products,2030,899.4709999,Mt/yr,1e-06
+steel_energy_coal,2030,4.426354244,EJ/yr,0.4
+steel_energy_coke,2030,10.87487154,EJ/yr,0.4
+steel_energy_electricity,2030,1.82198612,EJ/yr,0.4
+final_energy_other_industry,2035,45.46554917,EJ/yr,1e-06
+final_energy_transport,2035,11.53722401,EJ/yr,1e-06
+final_energy_building,2035,41.97014129,EJ/yr,1e-06
+steel_products,2035,851.852,Mt/yr,1e-06
+steel_energy_coal,2035,4.192018104,EJ/yr,0.4
+steel_energy_coke,2035,10.29914369,EJ/yr,0.4
+steel_energy_electricity,2035,1.725528139,EJ/yr,0.4

@@ -1,0 +1,20 @@
+.venv/
+.venv-maintainer/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.DS_Store
+# Keep .gitkeep in version control and ignore generated run contents.
+/runs/*
+!/runs/.gitkeep
+docs/_build/
+docs/reference/api/
+dist/
+.cache/
+*.log
+*.gdx
+*.lst
+*.lic
+gamslice.txt
+.env

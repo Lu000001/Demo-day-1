@@ -1,0 +1,9 @@
+node_loc,technology,mode,emission,unit,2030,2035
+China,biomass_existing,standard,CO2,Mt CO2/GWa,0.0,0.0
+China,biomass_new,standard,CO2,Mt CO2/GWa,0.0,0.0
+China,coal_existing,standard,CO2,Mt CO2/GWa,7.748874044,7.748874044
+China,coal_new,standard,CO2,Mt CO2/GWa,7.748874044,7.748874044
+China,gas_existing,standard,CO2,Mt CO2/GWa,3.95374746,3.95374746
+China,gas_new,standard,CO2,Mt CO2/GWa,3.95374746,3.95374746
+China,heat_coal,standard,CO2,Mt CO2/GWa,4.874041773,4.874041773
+China,heat_gas,standard,CO2,Mt CO2/GWa,1.897798781,1.897798781

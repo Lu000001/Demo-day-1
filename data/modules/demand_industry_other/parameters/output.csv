@@ -1,0 +1,7 @@
+node_loc,technology,mode,node_dest,commodity,level,unit,2030,2035
+China,use_other_industry_coal,standard,China,other_industry_coal,final_demand,-,1,1
+China,use_other_industry_diesel,standard,China,other_industry_diesel,final_demand,-,1,1
+China,use_other_industry_electricity,standard,China,other_industry_electricity,final_demand,-,1,1
+China,use_other_industry_gas,standard,China,other_industry_gas,final_demand,-,1,1
+China,use_other_industry_gasoline,standard,China,other_industry_gasoline,final_demand,-,1,1
+China,use_other_industry_lpg,standard,China,other_industry_lpg,final_demand,-,1,1

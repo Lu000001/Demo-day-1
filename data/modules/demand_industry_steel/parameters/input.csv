@@ -1,0 +1,15 @@
+node_loc,technology,mode,node_origin,commodity,level,unit,2030,2035
+China,iron_making,standard,China,coal,final,GWa/Mt,0.1306446346,0.1306446346
+China,iron_making,standard,China,coke,feedstock,GWa/Mt,0.3265647389,0.3265647389
+China,iron_making,standard,China,coke,final,GWa/Mt,0.06045586868,0.06045586868
+China,iron_making,standard,China,electricity,final,GWa/Mt,0.03075244444,0.03075244444
+China,iron_making,standard,China,iron_ore,material,Mt/Mt,1.761192827,1.761192827
+China,steel_crf,standard,China,coal,final,GWa/Mt,0.04198290763,0.04198290763
+China,steel_crf,standard,China,coke,final,GWa/Mt,0.04548148326,0.04548148326
+China,steel_crf,standard,China,crude_steel,material,Mt/Mt,1.019102,1.019102
+China,steel_crf,standard,China,electricity,final,GWa/Mt,0.01240250432,0.01240250432
+China,steel_making_bof,standard,China,electricity,final,GWa/Mt,0.02056883526,0.02056883526
+China,steel_making_bof,standard,China,pig_iron,material,Mt/Mt,0.9519038076,0.9519038076
+China,steel_making_bof,standard,China,scrap,material,Mt/Mt,0.1402805611,0.1402805611
+China,steel_making_eaf,standard,China,electricity,final,GWa/Mt,0.06,0.06
+China,steel_making_eaf,standard,China,scrap,material,Mt/Mt,1.05,1.05

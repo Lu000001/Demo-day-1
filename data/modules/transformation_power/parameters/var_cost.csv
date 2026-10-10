@@ -1,0 +1,17 @@
+node_loc,technology,mode,unit,2030,2035
+China,biomass_existing,standard,million CNY/GWa,0.01,0.01
+China,biomass_new,standard,million CNY/GWa,0.01,0.01
+China,coal_existing,standard,million CNY/GWa,0.01,0.01
+China,coal_new,standard,million CNY/GWa,0.01,0.01
+China,gas_existing,standard,million CNY/GWa,0.01,0.01
+China,gas_new,standard,million CNY/GWa,0.01,0.01
+China,heat_coal,standard,million CNY/GWa,20.0,20.0
+China,heat_gas,standard,million CNY/GWa,20.0,20.0
+China,hydro_existing,standard,million CNY/GWa,0.01,0.01
+China,hydro_new,standard,million CNY/GWa,0.01,0.01
+China,nuclear_existing,standard,million CNY/GWa,0.01,0.01
+China,nuclear_new,standard,million CNY/GWa,0.01,0.01
+China,solar_existing,standard,million CNY/GWa,0.01,0.01
+China,solar_new,standard,million CNY/GWa,0.01,0.01
+China,wind_existing,standard,million CNY/GWa,0.01,0.01
+China,wind_new,standard,million CNY/GWa,0.01,0.01

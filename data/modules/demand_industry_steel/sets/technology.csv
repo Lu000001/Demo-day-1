@@ -1,0 +1,5 @@
+name,kind,activity_unit,sector,carrier,source,description
+iron_making,steel,Mt/yr,steel,steel_products,none,Blast furnace with folded sintering/pellets
+steel_making_bof,steel,Mt/yr,steel,steel_products,none,Basic oxygen furnace
+steel_making_eaf,steel,Mt/yr,steel,steel_products,none,Scrap EAF: explicitly modified teaching process
+steel_crf,steel,Mt/yr,steel,steel_products,none,Finishing: crude steel to steel products

@@ -1,0 +1,8 @@
+node_loc,technology,mode,unit,2030,2035
+China,biomass_existing,standard,GWa,8.686,8.686
+China,coal_existing,standard,GWa,530.01585,516.11535
+China,gas_existing,standard,GWa,37.34,34.757
+China,hydro_existing,standard,GWa,86.68131541,86.68131541
+China,nuclear_existing,standard,GWa,55.2273,55.2273
+China,solar_existing,standard,GWa,68.19370119,62.04494639
+China,wind_existing,standard,GWa,101.0322727,75.05079714

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: Please cite this teaching repository when reusing its software or examples.
+title: MESSAGEix-China-Demo
+repository-code: https://github.com/SongminYu/MESSAGEix-China-Demo
+type: software
+version: 0.1.0
+authors:
+  - family-names: Yu
+    given-names: Songmin
+license: MIT

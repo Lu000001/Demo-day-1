@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MESSAGEix-China-Demo"
+version = "0.1.0"
+description = "A small annual MESSAGEix model with a complete reproducible research workflow"
+requires-python = ">=3.11,<3.14"
+dependencies = ["message-ix==3.11.1", "ixmp==3.11.1", "ixmp4>=0.10,<0.11", "pandas>=2.2,<3", "PyYAML>=6,<7", "pyam-iamc==3.0.0", "matplotlib>=3.8,<4", "openpyxl>=3.1,<4"]
+
+[project.urls]
+Repository = "https://github.com/SongminYu/MESSAGEix-China-Demo"
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+docs = ["sphinx>=8,<9", "myst-parser>=4,<5", "sphinx-autoapi>=3,<4", "sphinx-rtd-theme>=3,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["message*", "tools*", "reporting*"]
+
+[tool.setuptools.package-data]
+reporting = ["*.yaml", "*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires a working GAMS and HiGHS installation"]

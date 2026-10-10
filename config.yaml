@@ -1,0 +1,21 @@
+model_name: MESSAGEix-China-Demo
+framework:
+  horizon:
+    year_start: 2030
+    year_end: 2035
+    year_step: 5
+    first_model_year: 2030
+  demand_scale: 1.0
+  policies:
+    carbon_price:
+      2030: 100
+      2035: 150
+addons:
+  demand_industry_steel:
+    ccs: true
+solver:
+  name: highs
+  gams_executable: null
+  gams_license_file: null  # Optional explicit license path; never copied into an archive.
+  options:
+    threads: 1

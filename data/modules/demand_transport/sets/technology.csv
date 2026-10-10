@@ -1,0 +1,7 @@
+name,kind,activity_unit,sector,carrier,source,description
+use_transport_diesel,final_use,GWa,transport,diesel,none,Identity bridge: no end-use efficiency or service-demand model
+use_transport_electricity,final_use,GWa,transport,electricity,none,Identity bridge: no end-use efficiency or service-demand model
+use_transport_fuel_oil,final_use,GWa,transport,fuel_oil,none,Identity bridge: no end-use efficiency or service-demand model
+use_transport_gas,final_use,GWa,transport,gas,none,Identity bridge: no end-use efficiency or service-demand model
+use_transport_gasoline,final_use,GWa,transport,gasoline,none,Identity bridge: no end-use efficiency or service-demand model
+use_transport_kerosene,final_use,GWa,transport,kerosene,none,Identity bridge: no end-use efficiency or service-demand model

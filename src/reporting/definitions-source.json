@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/IAMconsortium/common-definitions",
+  "commit": "22efedc13e2e459a1774d4a84e781ed028a2d639",
+  "archive_sha256": "2def685d25debadf05beb4e90feabcb0ea04f8a95197a5b0fbb4254c6085dd69",
+  "license": "CC0-1.0",
+  "standard_codes": 72,
+  "extensions": 4
+}

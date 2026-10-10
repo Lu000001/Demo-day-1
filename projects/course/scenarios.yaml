@@ -1,0 +1,16 @@
+reference: {}
+carbon_price:
+  framework:
+    policies:
+      carbon_price:
+        2030: 800
+        2035: 1200
+no_ccs:
+  framework:
+    policies:
+      carbon_price:
+        2030: 800
+        2035: 1200
+  addons:
+    demand_industry_steel:
+      ccs: false

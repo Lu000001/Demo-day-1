@@ -1,0 +1,3 @@
+node_loc,technology,mode,node_origin,commodity,level,unit,2030,2035
+China,co2_storage,standard,China,CO2_captured,captured,-,1.0,1.0
+China,iron_capture,standard,China,electricity,final,GWa/Mt,0.01377150595,0.01377150595

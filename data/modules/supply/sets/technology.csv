@@ -1,0 +1,13 @@
+name,kind,activity_unit,sector,carrier,source,description
+supply_coal,supply,GWa,none,coal,none,"Delivered coal, aggregate priced supply"
+supply_coke,supply,GWa,none,coke,none,"Delivered coke, aggregate priced supply"
+supply_gas,supply,GWa,none,gas,none,"Delivered gas, aggregate priced supply"
+supply_diesel,supply,GWa,none,diesel,none,"Delivered diesel, aggregate priced supply"
+supply_gasoline,supply,GWa,none,gasoline,none,"Delivered gasoline, aggregate priced supply"
+supply_kerosene,supply,GWa,none,kerosene,none,"Delivered kerosene, aggregate priced supply"
+supply_fuel_oil,supply,GWa,none,fuel_oil,none,"Delivered fuel_oil, aggregate priced supply"
+supply_lpg,supply,GWa,none,lpg,none,"Delivered lpg, aggregate priced supply"
+supply_biomass,supply,GWa,none,biomass,none,"Delivered biomass, aggregate priced supply"
+supply_iron_ore,material,Mt/yr,none,iron_ore,none,National iron_ore supply
+supply_scrap,material,Mt/yr,none,scrap,none,National scrap supply
+coke_feedstock,distribution,GWa,none,coke,none,Coke allocated to steel reductant use

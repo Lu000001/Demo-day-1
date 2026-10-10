@@ -1,0 +1,5 @@
+node_loc,technology,mode,node_dest,commodity,level,unit,2030,2035
+China,iron_making,standard,China,pig_iron,material,Mt/Mt,1,1
+China,steel_crf,standard,China,steel_products,product,Mt/Mt,1,1
+China,steel_making_bof,standard,China,crude_steel,material,Mt/Mt,1,1
+China,steel_making_eaf,standard,China,crude_steel,material,Mt/Mt,1,1

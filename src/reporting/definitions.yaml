@@ -1,0 +1,451 @@
+- Capacity|Electricity:
+    unit: GW
+    description: Total installed (available) electricity generation capacity
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Biomass:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from purpose-grown
+      bioenergy crops, biogas, crop and forestry residue, municipal solid waste bioenergy
+      and traditional biomass
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Coal:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from coal
+      including lignite
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Gas:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from natural
+      gas (fossil methane)
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Hydro:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from hydropower
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Nuclear:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from nuclear
+      power
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Solar:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from solar
+      energy
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Capacity|Electricity|Wind:
+    unit: GW
+    description: Installed (available) capacity to generate electricity from wind
+      power
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Carbon Capture:
+    unit: Mt CO2/yr
+    description: Total amount of carbon dioxide (CO2) captured either from the atmosphere,
+      directly from oceans, or from point sources as energy use in supply and demand
+      sectors (IPCC category 1A, 1B) or industrial processes (IPCC categories 2A,
+      B, C, E)
+    source: IAMC common-definitions
+    source_file: variable/emissions/carbon-management.yaml
+- Carbon Capture|Geological Storage:
+    unit: Mt CO2/yr
+    description: Captured carbon dioxide (CO2) that is injected into subsurface geological
+      storage reservoirs (e.g., in situ mineralization), also called 'Carbon Capture
+      and Sequestration' (CCS)
+    source: IAMC common-definitions
+    source_file: variable/emissions/carbon-management.yaml
+- Emissions|CO2:
+    unit: Mt CO2/yr
+    description: Emissions of carbon dioxide (CO2) to the atmosphere
+    source: IAMC common-definitions
+    source_file: variable/emissions/emissions.yaml
+- Final Energy:
+    unit: EJ/yr
+    description: Final energy consumption by all end-use sectors and all fuels, including
+      non-energy use, excluding transmission/distribution losses
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Carbon Management:
+    unit: EJ/yr
+    description: Total energy use for carbon management, i.e., capture and/or removal
+      of CO2
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Carbon Management|Electricity:
+    unit: EJ/yr
+    description: Electricity use for carbon management
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Electricity:
+    unit: EJ/yr
+    description: Final energy consumption of electricity (including on-site solar
+      PV), excluding transmission/distribution losses
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Gases:
+    unit: EJ/yr
+    description: Final energy fuel consumption of gaseous fuels including natural
+      gas and biogas, not including hydrogen
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Heat:
+    unit: EJ/yr
+    description: Final energy fuel consumption of centralized heat
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Electricity:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of electricity
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Gases:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of gaseous fuels including natural gas and biogas, not
+      including hydrogen
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Heat:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of centralized heat
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Electricity:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of electricity
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Gases:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of gaseous fuels including natural gas and biogas, not including hydrogen
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Heat:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of centralized heat
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Liquids:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of refined liquid fuels including oil products, fuels from gas and coal, synthetic
+      fuels and biofuels
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Liquids|Oil:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of liquid fuels from refined crude oil
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Solids:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of solid energy carriers, including coal, briquettes, coke, and wood pellets
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Solids|Biomass:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of solid biomass (e.g., commercial charcoal, wood chips, wood pellets)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Iron and Steel|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy consumption by the iron and steel sector excluding feedstocks
+      of coal, lignite, and derived products (e.g., coke, briquettes)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Liquids:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of refined liquid fuels including oil products, fuels from
+      gas and coal, synthetic fuels and biofuels
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Liquids|Oil:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of liquid fuels from refined crude oil
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Solids:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of solid energy carriers, including coal, briquettes, coke,
+      and wood pellets
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Solids|Biomass:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of solid biomass (e.g., commercial charcoal, wood chips,
+      wood pellets)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Industry|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy consumption by the industrial sector excluding non-energy
+      use (e.g.feedstocks) of coal, lignite, and derived products (e.g., coke, briquettes)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Liquids:
+    unit: EJ/yr
+    description: Final energy fuel consumption of refined liquid fuels including oil
+      products, fuels from gas and coal, synthetic fuels and biofuels
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Liquids|Oil:
+    unit: EJ/yr
+    description: Final energy fuel consumption of liquid fuels from refined crude
+      oil
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Non-Energy Use:
+    unit: EJ/yr
+    description: Final energy consumption in non-combustion processes
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Non-Energy Use|Solids:
+    unit: EJ/yr
+    description: Final energy consumption of solid energy carriers, including coal,
+      briquettes, coke, and wood pellets in non-combustion processes
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Non-Energy Use|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy consumption of coal, lignite, and derived products (e.g.,
+      coke, briquettes) in non-combustion processes
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Electricity:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of electricity
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Gases:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of gaseous fuels including natural gas and biogas, not including hydrogen
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Heat:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of centralized heat
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Liquids:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of refined liquid fuels including oil products, fuels from gas and coal, synthetic
+      fuels and biofuels
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Liquids|Oil:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of liquid fuels from refined crude oil
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Solids:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of solid energy carriers, including coal, briquettes, coke, and wood pellets
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Solids|Biomass:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of solid biomass (e.g., commercial charcoal, wood chips, wood pellets)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Residential and Commercial|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy consumption by the residential and commercial sector
+      of coal, lignite, and derived products (e.g., coke, briquettes)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Solids:
+    unit: EJ/yr
+    description: Final energy fuel consumption of solid energy carriers, including
+      coal, briquettes, coke, and wood pellets
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Solids|Biomass:
+    unit: EJ/yr
+    description: Final energy fuel consumption of solid biomass (e.g., commercial
+      charcoal, wood chips, wood pellets)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy fuel consumption of coal, lignite, and derived products
+      (e.g., coke, briquettes)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers')
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Electricity:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of electricity
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Gases:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of gaseous fuels including natural gas
+      and biogas, not including hydrogen
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Heat:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of centralized heat
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Liquids:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of refined liquid fuels including oil
+      products, fuels from gas and coal, synthetic fuels and biofuels
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Liquids|Oil:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of liquid fuels from refined crude oil
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Solids:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of solid energy carriers, including coal,
+      briquettes, coke, and wood pellets
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Solids|Biomass:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of solid biomass (e.g., commercial charcoal,
+      wood chips, wood pellets)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Final Energy|Transportation|Solids|Coal:
+    unit: EJ/yr
+    description: Final energy consumption by the transportation sector excluding international
+      aviation and shipping (see 'Bunkers') of coal, lignite, and derived products
+      (e.g., coke, briquettes)
+    source: IAMC common-definitions
+    source_file: variable/energy/final-energy.yaml
+- Gross Emissions|CO2:
+    unit: Mt CO2/yr
+    description: Gross emissions of carbon dioxide (CO2), not accounting for negative
+      emissions, for example from bioenergy with CCS (BECCS), direct air carbon capture
+      or agriculture, forestry and other land use (AFOLU)
+    source: IAMC common-definitions
+    source_file: variable/emissions/emissions.yaml
+- Production|Iron and Steel|Iron|Pig Iron:
+    unit: Mt/yr
+    description: Production of pig iron, an intermediate good used in the iron industry
+      for the production of steel produced by smelting iron in a blast furnace
+    source: IAMC common-definitions
+    source_file: variable/industry/production.yaml
+- Production|Iron and Steel|Steel:
+    unit: Mt/yr
+    description: Production of raw steel, an alloy of carbon and iron
+    source: IAMC common-definitions
+    source_file: variable/industry/production.yaml
+- Secondary Energy|Electricity:
+    unit: EJ/yr
+    description: Total net electricity generation
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Biomass:
+    unit: EJ/yr
+    description: Net electricity generation from purpose-grown bioenergy crops, biogas,
+      crop and forestry residue, municipal solid waste bioenergy and traditional biomass
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Coal:
+    unit: EJ/yr
+    description: Net electricity generation from coal including lignite
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Gas:
+    unit: EJ/yr
+    description: Net electricity generation from natural gas (fossil methane)
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Hydro:
+    unit: EJ/yr
+    description: Net electricity generation from hydropower
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Nuclear:
+    unit: EJ/yr
+    description: Net electricity generation from nuclear power
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Solar:
+    unit: EJ/yr
+    description: Net electricity generation from solar energy
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Secondary Energy|Electricity|Wind:
+    unit: EJ/yr
+    description: Net electricity generation from wind power
+    source: IAMC common-definitions
+    source_file: variable/energy/secondary-energy-electricity.yaml
+- Teaching|Final Energy|Industry excluding Steel:
+    unit: EJ/yr
+    description: All modeled industrial energy consumption other than steel; includes
+      aggregated cement/chemicals/nonferrous/construction. Excludes separately identified
+      non-energy feedstocks.
+    source: Teaching extension (not an IAMC standard variable)
+- Teaching|Production|Finished Steel:
+    unit: Mt/yr
+    description: Finished steel products after the finishing yield; not crude steel.
+    source: Teaching extension (not an IAMC standard variable)
+- Teaching|Production|Crude Steel|BOF:
+    unit: Mt/yr
+    description: Crude steel produced by the BOF process; contains its actual modeled
+      scrap input.
+    source: Teaching extension (not an IAMC standard variable)
+- Teaching|Production|Crude Steel|Scrap EAF:
+    unit: Mt/yr
+    description: Crude steel produced by the scrap-only EAF process.
+    source: Teaching extension (not an IAMC standard variable)

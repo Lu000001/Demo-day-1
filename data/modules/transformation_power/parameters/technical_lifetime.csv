@@ -1,0 +1,8 @@
+node_loc,technology,unit,2030,2035
+China,biomass_new,y,30,30
+China,coal_new,y,40,40
+China,gas_new,y,30,30
+China,hydro_new,y,100,100
+China,nuclear_new,y,100,100
+China,solar_new,y,20,20
+China,wind_new,y,21,21

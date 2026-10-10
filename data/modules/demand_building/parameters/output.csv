@@ -1,0 +1,9 @@
+node_loc,technology,mode,node_dest,commodity,level,unit,2030,2035
+China,use_building_biomass,standard,China,building_biomass,final_demand,-,1,1
+China,use_building_coal,standard,China,building_coal,final_demand,-,1,1
+China,use_building_diesel,standard,China,building_diesel,final_demand,-,1,1
+China,use_building_electricity,standard,China,building_electricity,final_demand,-,1,1
+China,use_building_gas,standard,China,building_gas,final_demand,-,1,1
+China,use_building_gasoline,standard,China,building_gasoline,final_demand,-,1,1
+China,use_building_heat,standard,China,building_heat,final_demand,-,1,1
+China,use_building_lpg,standard,China,building_lpg,final_demand,-,1,1
