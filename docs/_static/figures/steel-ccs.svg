@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" role="img" aria-labelledby="title desc">
+  <title id="title">MESSAGEix-China-Demo: steel routes and the capture addon</title>
+  <desc id="desc">Iron ore, coal, coke and electricity feed the blast furnace. Pig iron and scrap feed BOF. The alternative EAF route uses scrap and electricity. Both produce crude steel at the material level. Finishing consumes crude steel, electricity, coal and coke and delivers steel products to fixed demand. A short dashed activity link attaches carbon capture to the blast furnace, separately from the solid captured-CO2 flow to transport and permanent storage. E ports all refer to the final-electricity balance shown on the preceding overview.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#42616f"/></marker>
+    <marker id="addon-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#956641"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#344853;font-size:16px}
+      .legend{font-size:13px;fill:#53615f}
+      .technology{fill:#f0e6d9;stroke:#956641;stroke-width:1.2}
+      .technology-name{font-size:16px;font-weight:600;fill:#805634}
+      .detail{font-size:12px;fill:#53615f}
+      .commodity{fill:#42616f}
+      .commodity-name{font-size:16px;font-weight:600;fill:#42616f}
+      .level{font-size:12.5px;fill:#53615f}
+      .flow{fill:none;stroke:#42616f;stroke-width:1.7;stroke-linejoin:round;marker-end:url(#arrow)}
+      .bus{fill:none;stroke:#42616f;stroke-width:2.4}
+      .addon{fill:none;stroke:#956641;stroke-width:1.7;stroke-dasharray:4 3;marker-end:url(#addon-arrow)}
+      .addon-label{font-size:12px;fill:#956641}
+      .demand{font-size:15.5px;font-weight:600;fill:#496655}
+      .demand-cap{stroke:#496655;stroke-width:3}
+      .port{fill:#f5f4ef;stroke:#42616f;stroke-width:1.5}
+      .port-letter{fill:#42616f;font-size:12px;font-weight:700}
+    </style>
+  </defs>
+
+  <g aria-label="Legend">
+    <circle cx="7" cy="13" r="4" class="commodity"/><text x="20" y="18" class="legend">Commodity (level)</text>
+    <rect x="172" y="3" width="24" height="19" class="technology"/><text x="206" y="18" class="legend">Technology</text>
+    <circle cx="337" cy="13" r="10" class="port"/><text x="337" y="17" text-anchor="middle" class="port-letter">E</text><text x="355" y="18" class="legend">Same final-electricity balance</text>
+    <path d="M626 13H663" class="addon"/><text x="674" y="18" class="legend">Addon activity link</text>
+  </g>
+
+  <!-- Capture occupies its own lane above the furnace. Its activity link never crosses a commodity flow. -->
+  <g aria-label="Capture and storage">
+    <circle cx="128" cy="74" r="10" class="port"/><text x="128" y="78" text-anchor="middle" class="port-letter">E</text>
+    <path d="M138 74H155" class="flow"/>
+    <rect x="155" y="52" width="110" height="44" class="technology"/>
+    <text x="210" y="70" text-anchor="middle" class="technology-name">CO₂ capture</text>
+    <text x="210" y="88" text-anchor="middle" class="detail">Optional addon</text>
+    <path d="M265 74H420" class="flow"/>
+    <path d="M420 74H535" class="flow"/>
+    <circle cx="420" cy="74" r="4.5" class="commodity"/>
+    <text x="420" y="53" text-anchor="middle" class="commodity-name">Captured CO₂</text>
+    <text x="420" y="100" text-anchor="middle" class="level">captured</text>
+    <rect x="535" y="52" width="168" height="44" class="technology"/>
+    <text x="619" y="69" text-anchor="middle" class="technology-name">CO₂ transport</text>
+    <text x="619" y="90" text-anchor="middle" class="technology-name">and storage</text>
+    <text x="731" y="70" class="demand">All captured CO₂</text>
+    <text x="731" y="91" class="detail">goes to permanent storage</text>
+    <path d="M210 144V97" class="addon"/>
+    <text x="225" y="124" class="addon-label">Activity tied to the furnace</text>
+  </g>
+
+  <g aria-label="Blast furnace and basic oxygen furnace route">
+    <text x="48" y="141" text-anchor="middle" class="commodity-name">Iron ore</text>
+    <text x="48" y="189" text-anchor="middle" class="level">material</text>
+    <circle cx="48" cy="166" r="4.5" class="commodity"/>
+    <path d="M48 166H155" class="flow"/>
+    <rect x="155" y="144" width="110" height="44" class="technology"/>
+    <text x="210" y="171" text-anchor="middle" class="technology-name">Blast furnace</text>
+    <path d="M265 166H331" class="flow"/>
+    <path d="M331 166H420" class="flow"/>
+    <circle cx="331" cy="166" r="4.5" class="commodity"/>
+    <text x="331" y="147" text-anchor="middle" class="commodity-name">Pig iron</text>
+    <text x="331" y="190" text-anchor="middle" class="level">material</text>
+    <rect x="420" y="144" width="84" height="44" class="technology"/>
+    <text x="462" y="171" text-anchor="middle" class="technology-name">BOF</text>
+    <circle cx="462" cy="123" r="10" class="port"/><text x="462" y="127" text-anchor="middle" class="port-letter">E</text>
+    <path d="M462 133V144" class="flow"/>
+    <path d="M504 166H565" class="flow"/>
+    <text x="48" y="216" text-anchor="middle" class="commodity-name">Coal, coke</text>
+    <circle cx="48" cy="230" r="3" class="commodity"/><circle cx="48" cy="236" r="3" class="commodity"/><circle cx="48" cy="242" r="3" class="commodity"/>
+    <path d="M48 230H120V171H155" class="flow"/>
+    <path d="M48 236H126V177H155" class="flow"/>
+    <path d="M48 242H132V183H155" class="flow"/>
+    <text x="48" y="258" text-anchor="middle" class="level">final / feedstock</text>
+    <circle cx="210" cy="218" r="10" class="port"/><text x="210" y="222" text-anchor="middle" class="port-letter">E</text>
+    <path d="M210 208V188" class="flow"/>
+  </g>
+
+  <g aria-label="Scrap supply and electric arc furnace route">
+    <text x="48" y="284" text-anchor="middle" class="commodity-name">Scrap</text>
+    <circle cx="48" cy="306" r="4.5" class="commodity"/>
+    <text x="48" y="332" text-anchor="middle" class="level">material</text>
+    <path d="M48 306H420" class="flow"/>
+    <path d="M305 306V214H395V178H420" class="flow"/>
+    <circle cx="305" cy="306" r="3.5" class="commodity"/>
+    <rect x="420" y="284" width="84" height="44" class="technology"/>
+    <text x="462" y="311" text-anchor="middle" class="technology-name">EAF</text>
+    <circle cx="462" cy="262" r="10" class="port"/><text x="462" y="266" text-anchor="middle" class="port-letter">E</text>
+    <path d="M462 272V284" class="flow"/>
+    <path d="M504 306H565" class="flow"/>
+  </g>
+
+  <g aria-label="Common crude steel balance, finishing and product demand">
+    <path d="M565 166V306" class="bus"/>
+    <circle cx="565" cy="166" r="4" class="commodity"/><circle cx="565" cy="306" r="4" class="commodity"/>
+    <text x="565" y="142" text-anchor="middle" class="commodity-name">Crude steel</text>
+    <text x="565" y="331" text-anchor="middle" class="level">material</text>
+    <path d="M565 226H635" class="flow"/>
+    <circle cx="565" cy="226" r="4" class="commodity"/>
+    <rect x="635" y="204" width="90" height="44" class="technology"/>
+    <text x="680" y="231" text-anchor="middle" class="technology-name">Finishing</text>
+    <circle cx="680" cy="182" r="10" class="port"/><text x="680" y="186" text-anchor="middle" class="port-letter">E</text>
+    <path d="M680 192V204" class="flow"/>
+    <circle cx="676" cy="293" r="3" class="commodity"/><circle cx="684" cy="293" r="3" class="commodity"/>
+    <path d="M676 293V248" class="flow"/><path d="M684 293V248" class="flow"/>
+    <text x="680" y="318" text-anchor="middle" class="commodity-name">Coal, coke</text>
+    <text x="680" y="338" text-anchor="middle" class="level">final</text>
+    <path d="M725 226H773" class="flow"/>
+    <path d="M773 226H867" class="flow"/>
+    <circle cx="773" cy="226" r="4.5" class="commodity"/>
+    <text x="773" y="184" text-anchor="middle" class="commodity-name">Steel</text>
+    <text x="773" y="202" text-anchor="middle" class="commodity-name">products</text>
+    <text x="773" y="254" text-anchor="middle" class="level">product</text>
+    <path d="M867 214V238" class="demand-cap"/>
+    <text x="867" y="184" text-anchor="middle" class="demand">Steel</text>
+    <text x="867" y="202" text-anchor="middle" class="demand">demand</text>
+    <text x="867" y="254" text-anchor="middle" class="level">Mt/yr</text>
+  </g>
+</svg>

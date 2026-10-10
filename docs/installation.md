@@ -1,38 +1,27 @@
-# Installation
+# Getting Started
 
-Run commands from the repository root. Installation needs internet access; normal model runs use the included inputs. The verified setup is macOS arm64, Python 3.12, Java 17, MESSAGEix/ixmp 3.11.1, GAMS 49.6.1 and HiGHS 1.9.0. The instructions also cover Windows and Linux, which have not yet been tested for this repository.
+Follow these three steps to run a first scenario. Run commands from the repository root, and activate the project environment whenever you open a new terminal.
 
-## Python and Java environment
+## 1. Create the Python and Java environment
 
-Install [Miniforge](https://github.com/conda-forge/miniforge#install) for your operating system and processor, or use an existing Conda installation. On Windows, open **Miniforge Prompt**; on macOS/Linux, open a new terminal and check that `conda --version` works.
-
-With Git installed and repository access:
+Install [Miniforge](https://github.com/conda-forge/miniforge#install), or use an existing Conda installation. On Windows, open **Miniforge Prompt**. On macOS or Linux, open a terminal where `conda --version` works.
 
 ```bash
 git clone https://github.com/SongminYu/MESSAGEix-China-Demo.git
 cd MESSAGEix-China-Demo
-```
-
-Alternatively, use GitHub's **Code → Download ZIP** or an exported `MESSAGEix-China-Demo.zip`. Extract it and open a terminal in the directory containing `environment.yml` and `config.yaml`; Git is not needed for this route.
-
-```bash
 conda env create -f environment.yml
 conda activate MESSAGEix-China-Demo
-python --version
-java -version
 ```
 
-This installs Python 3.12, OpenJDK 17, the packages in `requirements-lock.txt` and an editable installation of the project's source. It includes MESSAGEix, ixmp, pyam, plotting/Excel libraries, Sphinx and pytest. Activate this environment in each new terminal; keep the project out of Conda's `base` environment.
+The environment includes Python 3.12, Java 17, MESSAGEix and the packages needed for plots, Excel files and documentation. GAMS is installed separately in the next step. Installation needs internet access; model runs use the data already in the repository.
 
-## GAMS and HiGHS
+Without Git, use **Code → Download ZIP** on GitHub, extract the archive, and open a terminal in the folder containing `environment.yml`. Then run the two `conda` commands above.
 
-MESSAGEix and HiGHS are open source. The GAMS runtime used here is proprietary and requires a valid license; installing Python packages or standalone HiGHS does not replace it. See the [MESSAGEix installation guide](https://docs.messageix.org/en/v3.11.1/install.html).
+## 2. Connect GAMS and HiGHS
 
-Download the full [GAMS distribution](https://www.gams.com/download/) for your operating system and processor; it includes [GAMS/HiGHS](https://www.gams.com/latest/docs/S_HIGHS.html). For individual non-commercial learning, obtain an applicable [free personal GAMS license](https://www.gams.com/free-licenses/) and install its access code through **GAMS Studio → Help → GAMS Licensing**. Check the portal's terms and version compatibility. A GAMSPy-only installation is not the runtime used here.
+Install the full [GAMS distribution](https://www.gams.com/download/) for your operating system. It includes the open-source HiGHS solver used by this model. GAMS itself requires a valid license; see the official [free personal license options](https://www.gams.com/free-licenses/) and their current terms. A personal license access code can be installed through **GAMS Studio → Help → GAMS Licensing**.
 
-A current demo license is another option: the tested CCS-enabled formulation has 383 constraints and 191 variables, below the published demo limit of 2,000 each for linear models. Demo licenses expire; check the official [licensing conditions](https://www.gams.com/sales/licensing/). The supplied scenarios use HiGHS and need no purchased CPLEX or Gurobi license.
-
-Put `gams` on your terminal's `PATH`, or edit the existing `solver` block in `config.yaml`. For the tested macOS installation:
+Edit the existing `solver` block in `config.yaml`. For example, on macOS:
 
 ```yaml
 solver:
@@ -43,27 +32,29 @@ solver:
     threads: 1
 ```
 
-On Windows, use your actual executable path, such as `'C:/GAMS/<version>/gams.exe'`; on Linux, use the executable in the installed GAMS directory. Leave `gams_executable: null` when GAMS is on `PATH`. If needed, set `gams_license_file` to the absolute path of your license, keeping that file outside the repository.
+`gams_executable` is the full path to the executable, not just its folder. Setting it here is enough for this project; you do not need to change the system `PATH`. On Windows, use your actual path to `gams.exe`, such as `'C:/GAMS/<version>/gams.exe'`. On Linux, use the executable inside the installed GAMS directory. Leave this setting as `null` if `gams` is already on `PATH`.
 
-## Check and run
+`gams_license_file` accepts a **file path**, not license text. Leave it as `null` if GAMS already finds your installed license. Otherwise, point it to an existing license file, for example `'/Users/your-name/licenses/gamslice.txt'`. Use your own absolute path and keep the license file outside the repository.
+
+## 3. Run your first scenario
 
 ```bash
 python -m tools.cli doctor
-python -m tools.cli validate --project course --all
-python -m tools.cli run --project course --all
+python -m tools.cli validate --project course --scenario reference
+python -m tools.cli run --project course --scenario reference
 ```
 
-`doctor` reports packages, Java, GAMS and the configured solver. `validate` checks scenario settings and data without solving. `run` executes the three supplied scenarios, audits results and prints their directories under `runs/`; a successful run verifies the runtime and license setup.
+`doctor` checks the software paths. `validate` checks the inputs without solving. `run` solves the model, checks its outputs and prints the new directory under `runs/`.
 
-Open each run's `report/iamc.xlsx` and `report/figures/`. Continue with [Scenarios and Results](results.md) to create a project, compare cases or reproduce a run.
+Open that directory's **`report/iamc.xlsx`** and **`report/figures/`** to see your first results. Every run gets a separate directory, so running again keeps earlier results intact. Continue with [Model Overview](model.md), or go directly to [Scenarios and Results](results.md).
 
-## Troubleshooting
-
-First reactivate the project environment, then check the relevant item:
-
-| Symptom | Check |
-| --- | --- |
-| `No module named tools` | Run `python -m pip install --no-deps -e .` from the repository root inside the project environment. |
-| Java is missing or fails to load | Check `java -version`; Python and Java must use matching architectures. |
-| GAMS executable is missing | Check `PATH` or `solver.gams_executable` in `config.yaml`. |
-| License or solve failure | Read the new run's `run.log` and check the installed license and GAMS version. `doctor` alone does not verify license access. |
+<details class="doc-details">
+<summary>Setup checks and troubleshooting</summary>
+<ul>
+<li><strong>Missing <code>tools</code> module:</strong> reactivate the environment and run <code>python -m pip install --no-deps -e .</code> from the repository root.</li>
+<li><strong>Java error:</strong> check <code>java -version</code>. Python and Java must use the same processor architecture.</li>
+<li><strong>GAMS not found:</strong> check the executable path in <code>config.yaml</code>. Installing standalone HiGHS or a GAMSPy-only environment does not replace the full GAMS runtime used here.</li>
+<li><strong>License or solve error:</strong> inspect the new run's <code>run.log</code> and check that the license is valid for your GAMS version. A successful <code>doctor</code> check does not verify license access.</li>
+</ul>
+<p>The verified setup is macOS arm64, Python 3.12, Java 17, MESSAGEix/ixmp 3.11.1, GAMS 49.6.1 and HiGHS 1.9.0. Windows and Linux instructions are provided, but model solves on those platforms have not been verified for this repository.</p>
+</details>

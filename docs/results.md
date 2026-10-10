@@ -1,34 +1,76 @@
 # Scenarios and Results
 
-## Run the supplied cases
+A scenario changes assumptions, then solves the same model again. Start with the three examples in `projects/course/scenarios.yaml`, compare their results, and create your own project when you are ready.
 
-The definitions are in `projects/course/scenarios.yaml`:
+## Run and compare the supplied scenarios
 
-| Scenario | Carbon price in 2030 / 2035 (CNY/t CO₂) | CCS |
+| Scenario | Carbon price, 2030 / 2035 (CNY/t CO₂) | CCS |
 | --- | --- | --- |
-| `reference` | 100 / 150 | Allowed |
-| `carbon_price` | 800 / 1200 | Allowed |
+| `reference` | 100 / 150 | Available |
+| `carbon_price` | 800 / 1200 | Available |
 | `no_ccs` | 800 / 1200 | Disabled |
-
-These are illustrative assumptions. All cases use the same demands and base technology data. Comparing `reference` with `carbon_price` shows the response to a higher carbon price when CCS is available. Comparing `carbon_price` with `no_ccs` isolates the option to use CCS at the same prices.
 
 ```bash
 python -m tools.cli run --project course --all
 ```
 
-To run one case, use `--scenario reference` instead of `--all`. `course` is the default project, so `python -m tools.cli run --all` also runs these three cases. Each run creates a separate directory and prints its path; repeated runs preserve earlier results.
+The command prints a separate directory under `runs/` for each case. Use `--scenario reference` instead of `--all` to run just one case. Repeated runs create new directories.
 
-## Create a project
+| What to open inside a run | What you will find |
+| --- | --- |
+| `report/iamc.xlsx` | Result tables for Excel, with scenario, variable, unit and year. |
+| `report/figures/` | Charts of generation, energy use, emissions and steel production. |
+| `report/iamc.csv` | The same result series in CSV form for your own analysis. |
+| `report/validation.json` | Checks of the solved energy and material balances. |
 
-Projects share model code and input tables. Create a folder named `projects/my_study/` and save this as its `scenarios.yaml`:
+```{figure} _static/figures/emissions-comparison.png
+:alt: Net CO2 emissions in 2035: reference 7114, carbon_price 6097, and no_ccs 6462 Mt CO2 per year.
+:target: _static/figures/emissions-comparison.png
+:figclass: results-diagram
+
+Example outputs for 2035, rounded to whole Mt CO₂/yr. The two high-price scenarios use the same carbon prices. These are illustrative model results, not a national forecast.
+```
+
+Higher carbon prices change power generation and make steel CCS attractive. At the same high prices, allowing CCS lowers net emissions from about **6,462 to 6,097 Mt CO₂/yr**. The reduction is about 365 Mt, while 400 Mt is captured: capture uses electricity, and choices elsewhere in the energy system also change.
+
+To compare your own runs, replace the placeholders with the directories printed by the command above:
+
+```bash
+python -m tools.cli compare runs/<reference-run> runs/<carbon-price-run> runs/<no-ccs-run>
+```
+
+Open `runs/comparison/figures/` for the comparison charts. Choose one run per scenario; use distinct scenario names when comparing different projects. The chart above is reused from the project presentation and checked against saved runs with the current default inputs and calculation logic.
+
+<details class="doc-details">
+<summary>Read results with pyam and interpret the indicators</summary>
+
+```python
+import pyam
+
+results = pyam.IamDataFrame("runs/<reference-run>/report/iamc.csv")
+print(results.filter(variable="Emissions|CO2", year=2035).data)
+```
+
+<p>Use the actual run directory in the path. IAMC tables identify each value by model, scenario, region, variable, unit and year.</p>
+<ul>
+<li><code>Secondary Energy|Electricity</code> is generation; final electricity excludes grid losses.</li>
+<li><code>Production|Iron and Steel|Steel</code> is crude steel. <code>Teaching|Production|Finished Steel</code> is the finished product that meets demand.</li>
+<li><code>Carbon Capture</code> is captured CO₂; <code>Emissions|CO2</code> is net emissions from the modeled activities.</li>
+<li>Coke used as a reducing agent is reported under <code>Final Energy|Non-Energy Use</code>; capture electricity is under <code>Final Energy|Carbon Management</code>.</li>
+<li>Do not add a total to its components: steel final energy is already included in industry final energy.</li>
+</ul>
+<p>The CSV files <code>commodity_balance.csv</code> and <code>reconciliation.csv</code> check commodity balances and demand delivery, including any demand scaling. These results cover the model's activities, not a complete national emissions inventory.</p>
+</details>
+
+## Change assumptions in your own project
+
+Create `projects/my_study/` and save this as `scenarios.yaml` inside it:
 
 ```yaml
 reference: {}
-
 high_demand:
   framework:
     demand_scale: 1.05
-
 high_price_no_ccs:
   framework:
     policies:
@@ -40,85 +82,33 @@ high_price_no_ccs:
       ccs: false
 ```
 
-Each scenario independently overrides the root `config.yaml`, not another scenario. `high_demand` increases every exogenous demand by 5%, including steel-product demand. `high_price_no_ccs` sets prices in CNY/t CO₂ and disables the steel capture and storage extension while retaining all base sectors; capture and storage are then reported as zero. Carbon prices must cover both model years.
+`high_demand` raises every demand by 5%, including steel-product demand. `high_price_no_ccs` sets higher carbon prices and removes the steel CCS addon. Each case inherits `config.yaml` independently; settings do not carry over from the previous scenario.
 
 ```bash
 python -m tools.cli validate --project my_study --all
 python -m tools.cli run --project my_study --all
 ```
 
-Results appear under `runs/my_study_<scenario>_<UTC>_<id>/`. Use letters, digits, hyphens and underscores for project and scenario names, starting with a letter or digit.
+Results are written to `runs/my_study_<scenario>_<UTC>_<id>/`. Keep project and scenario names to letters, digits, hyphens and underscores, starting with a letter or digit. Projects share the code and input tables, so you do not need to copy the whole model.
 
-For a project-specific base, copy `config.yaml` to `projects/my_study/config.yaml` and pass `--config projects/my_study/config.yaml` to `doctor`, `validate` or `run`. This must be a complete base configuration; `scenarios.yaml` supplies the overrides. Creating the file does not automatically select it. Adding years, regions or technologies also requires corresponding data and potentially code changes; see [Model Structure](model.md).
+For a different base configuration, copy the complete `config.yaml` to your project and pass `--config projects/my_study/config.yaml` to `validate` and `run`. The file is used only when you select it explicitly.
 
-## Read a run
+## Reproduce or share a run
 
-Start with `report/iamc.xlsx` and the charts in `report/figures/`. Each run also retains the inputs and code needed for reproduction:
+Every run saves its code, inputs and resolved settings in `snapshot/`. `meta.json` records the scenario, solver and objective; `run.log` records what happened. This keeps a result tied to the assumptions that produced it.
 
-```text
-runs/course_reference_<UTC>_<id>/
-  meta.json                 project, scenario, status, objective and solve details
-  run.log                   diagnostic log
-  snapshot/                 exact source, inputs and resolved configuration
-    src/                    code used for this run
-    projects/course/        saved scenario definitions
-  manifest.json             snapshot file hashes
-  environment.json          software versions
-  solution.gdx              raw optimization solution
-  report/
-    iamc.xlsx               results for reading in Excel
-    iamc.csv                IAMC table with year columns
-    iamc_long.csv           table with year and value columns
-    validation.json         physical and reporting checks
-    commodity_balance.csv   commodity balance residuals
-    reconciliation.csv      configured demands versus modeled supply minus use
-    figures/                generated charts
-```
-
-IAMC tables identify values by model, scenario, region, variable, unit and year. Use pyam to select and analyze reported series, replacing `<reference-run>` with an actual directory name:
-
-```python
-import pyam
-
-results = pyam.IamDataFrame("runs/<reference-run>/report/iamc.csv")
-print(results.filter(variable="Emissions|CO2").data)
-```
-
-The reporting conventions are:
-
-- `Secondary Energy|Electricity|*` reports generation; final electricity consumption excludes grid losses.
-- Coke used as a reducing agent is included in `Final Energy|Non-Energy Use`. Capture electricity is included in `Final Energy|Carbon Management`.
-- `Production|Iron and Steel|Steel` reports crude steel. Defined `Teaching|` variables distinguish finished products and production routes.
-- `Carbon Capture` and `Carbon Capture|Geological Storage` are positive flows. `Emissions|CO2` is net of capture and covers only modeled activities.
-
-The validation and balance files check energy and material balances, capture–storage reconciliation, each configured demand and reporting consistency. `reconciliation.csv` includes any demand scaling. Reported China totals are not a complete national emissions inventory; see the [model boundaries](model.md).
-
-## Compare scenarios
-
-Replace the placeholders with the directories printed by your run commands; do not type the angle brackets literally:
-
-```bash
-python -m tools.cli compare runs/<reference-run> runs/<carbon-price-run> runs/<no-ccs-run>
-```
-
-Open `runs/comparison/figures/` for charts and `runs/comparison/iamc_long.csv` for combined data. Select another output directory with `--output`. Select one run per scenario; compare projects separately if their scenario names overlap, or give the scenarios distinct names.
-
-The supplied assumptions were verified to produce these mechanisms: higher carbon prices change power investment and generation and make steel CCS attractive; capture reaches the storage throughput limit. Disabling CCS at those same prices increases net emissions and system costs. Non-steel demand remains fixed, and scrap availability constrains steel production routes, so some outputs change little.
-
-Use your outputs to examine which electricity sources change, whether captured CO₂ equals stored CO₂, and why net emissions reductions differ from the amount captured. Reference behavior was checked using the environment described in [Installation](installation.md).
-
-## Reproduce and share
+Replace `<reference-run>` with an actual directory name:
 
 ```bash
 python -m tools.cli reproduce runs/<reference-run>
 ```
 
-The command verifies snapshot hashes and executes the saved code and data in a new run. It compares the objective and all IAMC series with the original in `reproduction.json`; changes to the live project do not replace the saved assumptions or original run.
+Reproduction verifies the snapshot, runs it in a new directory, and compares the objective and all reported series with the original. The checks are saved in `reproduction.json`; the original run stays intact.
 
-To share a reproducible run while excluding its disposable database and scratch logs:
+To share a reproducible run:
 
 ```bash
 python -m tools.cli archive runs/<reference-run> --output dist/reference-run.zip
 ```
 
-To share the project itself, use `python -m tools.cli export-course`. It creates `dist/MESSAGEix-China-Demo.zip` with source, inputs, projects and documentation, excluding generated results and installed environments.
+The archive keeps the files needed for reproduction and excludes disposable working files. To share the project without generated results or installed environments, use `python -m tools.cli export-course`; it writes `dist/MESSAGEix-China-Demo.zip`.

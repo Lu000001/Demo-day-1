@@ -1,0 +1,115 @@
+/* Give the model diagrams room while keeping the guide easy to scan. */
+.wy-nav-content {
+  max-width: 1140px;
+}
+
+.rst-content p,
+.rst-content li {
+  line-height: 1.65;
+}
+
+.rst-content h2 {
+  margin-top: 2rem;
+}
+
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
+  vertical-align: top;
+}
+
+.rst-content table code {
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.rst-content figure.model-diagram,
+.rst-content figure.results-diagram {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.rst-content figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.rst-content figure.results-diagram {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rst-content figcaption p {
+  margin: 0.75rem 0 0;
+  color: #526171;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.rst-content ol.model-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rst-content ol.model-flow > li {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #eaf2fb;
+  list-style: none;
+}
+
+.rst-content ol.model-flow > li:nth-child(2) {
+  background: #fbf0e3;
+}
+
+.rst-content ol.model-flow > li:nth-child(3) {
+  background: #e8f1ea;
+}
+
+.rst-content .model-flow p {
+  margin: 0.6rem 0 0;
+  font-size: 0.92rem;
+}
+
+.rst-content details.doc-details {
+  margin: 1.5rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid #dfe5eb;
+  border-radius: 8px;
+}
+
+.rst-content .doc-details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.rst-content .doc-details[open] summary {
+  margin-bottom: 1rem;
+}
+
+.rst-content .doc-details > :last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .rst-content ol.model-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .rst-content figure.model-diagram,
+  .rst-content figure.results-diagram {
+    padding: 0.5rem;
+  }
+}

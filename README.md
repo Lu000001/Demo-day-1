@@ -48,7 +48,7 @@ python -m tools.cli validate --project my_study --all
 python -m tools.cli run --project my_study --all
 ```
 
-Each scenario independently overrides [config.yaml](config.yaml). Here, `high_demand` increases all specified demands by 5%. Projects share the model code and input data; [further examples](docs/results.md#create-a-project) cover carbon prices, CCS and project-specific configurations.
+Each scenario independently overrides [config.yaml](config.yaml). Here, `high_demand` increases all specified demands by 5%. Projects share the model code and input data; [further examples](docs/results.md#change-assumptions-in-your-own-project) cover carbon prices, CCS and project-specific configurations.
 
 ## Repository and documentation
 
@@ -61,8 +61,9 @@ docs/             model guide and API documentation setup
 config.yaml       default assumptions and solver settings
 ```
 
-- [Model Structure](docs/model.md): architecture, data, units and scope.
-- [Installation](docs/installation.md): environment, GAMS and troubleshooting.
+- [Getting Started](docs/installation.md): install the environment and run a first scenario.
+- [Model Overview](docs/model.md): diagrams, sectors and optimization.
+- [Data and Configuration](docs/data.md): folders, CSV tables, units and settings.
 - [Scenarios and Results](docs/results.md): custom projects, analysis and reproducibility.
 
 To preview the documentation in the installed environment:
