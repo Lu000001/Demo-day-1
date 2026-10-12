@@ -15,7 +15,7 @@ addons:
     ccs: true
 solver:
   name: highs
-  gams_executable: null
+  gams_executable: '/Library/Frameworks/GAMS.framework/Resources/gams'
   gams_license_file: null  # Optional explicit license path; never copied into an archive.
   options:
     threads: 1
